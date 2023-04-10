@@ -3,16 +3,17 @@ import React, { useState } from 'react'
 
 const index = () => {
   //javascript logic
-  const [Time, setTime] = useState(new Date().toLocaleTimeString());
+  let [myName, setName] = useState("Rajesh");
 
-  setInterval(() => {
-    setTime(new Date().toLocaleTimeString());
-  }, 1000);
-
+  let changeName = () => {
+    setName("Rajesh meena");
+    console.log("Done click button");
+  };
 
   return (
     <>
-      <h2>{Time}</h2>
+      <h1>{myName}</h1>
+      <button onClick={changeName}>Change Name</button>
     </>
   )
 }
